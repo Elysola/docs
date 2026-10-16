@@ -1,6 +1,6 @@
-# ReCloud Studio Documentation
+# Elysola Documentation
 
-Public documentation site for **ReCloud Studio** (worldexecute.me / recloud.studio).
+Public documentation site for **Elysola** (elysola.org).
 
 Built with [Starlight](https://starlight.astro.build/) (Astro-based docs framework).
 

@@ -1,8 +1,8 @@
-# AGENTS.md — ReCloud Studio Documentation
+# AGENTS.md — Elysola Documentation
 
 ## Project Purpose
 
-Public documentation site for **ReCloud Studio** (worldexecute.me).
+Public documentation site for **Elysola** (elysola.org).
 Built with **Starlight** (Astro-based docs framework). Content mirrors the organization's public-facing policies, guides, and product docs.
 
 ## Tech Stack
@@ -72,5 +72,5 @@ Key sections to adapt for public docs:
 ## Notes
 
 - This is a new repository — initial setup only. Content migration from Feishu is pending.
-- ReCloud Studio is the successor/rebrand of SR思锐团队. Use "ReCloud Studio" in public-facing text.
+- Elysola is the successor/rebrand of SR思锐团队. Use "Elysola" in public-facing text.
 - Tagline: "We build open-source software. Fair, transparent, and community-driven."

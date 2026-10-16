@@ -3,8 +3,8 @@ import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { readFile } from "node:fs/promises";
 
-const SITE_URL = "https://docs.worldexecute.me";
-const SITE_TITLE = "ReCloud Studio";
+const SITE_URL = "https://docs.elysola.org";
+const SITE_TITLE = "Elysola";
 
 const fontInterRegular = await readFile(
   "./src/assets/fonts/Inter-Regular.ttf",

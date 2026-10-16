@@ -1,19 +1,19 @@
 ---
 draft: false
 title: 设计 Token
-description: ReCloud Studio 自有的设计变量、组件映射与版本治理规则
+description: Elysola 自有的设计变量、组件映射与版本治理规则
 ---
 
 ## 规范定位
 
-ReCloud Studio 不直接把 ReCloud UI 的默认 Token 当作产品规范。ReCloud UI 的默认值属于通用组件库实现细节，未来可能为了兼容更多产品、主题或组件而调整。
+Elysola 不直接把 Elysola UI 的默认 Token 当作产品规范。Elysola UI 的默认值属于通用组件库实现细节，未来可能为了兼容更多产品、主题或组件而调整。
 
-ReCloud Studio 的视觉结果必须由**Studio 自有的语义 Token 契约**决定。业务项目只消费 Studio Token；ReCloud UI 只是这些 Token 的一个实现载体。
+Elysola 的视觉结果必须由**Studio 自有的语义 Token 契约**决定。业务项目只消费 Studio Token；Elysola UI 只是这些 Token 的一个实现载体。
 
 ```text
-ReCloud Studio Token 契约
+Elysola Token 契约
         ↓ 映射与适配
-ReCloud UI Token / 组件 API
+Elysola UI Token / 组件 API
         ↓
 产品页面
 ```
@@ -51,10 +51,10 @@ ReCloud UI Token / 组件 API
 
 以下规则是强制约定：
 
-- ReCloud UI 的默认 Token 不是 ReCloud Studio 的稳定 API。
-- ReCloud Studio 必须维护自己的 Token 清单和版本记录。
-- 业务项目不得直接依赖 ReCloud UI 的默认颜色、默认圆角、默认间距或默认字号。
-- ReCloud UI 升级前必须检查 Studio Token 的映射和视觉回归结果。
+- Elysola UI 的默认 Token 不是 Elysola 的稳定 API。
+- Elysola 必须维护自己的 Token 清单和版本记录。
+- 业务项目不得直接依赖 Elysola UI 的默认颜色、默认圆角、默认间距或默认字号。
+- Elysola UI 升级前必须检查 Studio Token 的映射和视觉回归结果。
 - 只有经过评审并更新本文档、Token 源文件和迁移说明后，Studio Token 才能发生变化。
 
 ## 推荐的 Token 清单
@@ -79,13 +79,13 @@ ReCloud UI Token / 组件 API
 | 排版     | `--studio-type-*`               | 字体、字号、字重和行高   |
 | 焦点     | `--studio-focus-ring-*`         | 键盘焦点指示             |
 
-## ReCloud Studio 推荐默认值
+## Elysola 推荐默认值
 
-以下值是 ReCloud Studio 的第一版产品基线。它们不是 ReCloud UI 的默认值，而是 Studio 应用在没有产品级例外时必须采用的推荐值。后续变更应遵循本文的 Token 变更流程，并记录版本和迁移说明。
+以下值是 Elysola 的第一版产品基线。它们不是 Elysola UI 的默认值，而是 Studio 应用在没有产品级例外时必须采用的推荐值。后续变更应遵循本文的 Token 变更流程，并记录版本和迁移说明。
 
 ### 颜色
 
-颜色优先使用语义 Token。下面的原始值与当前 ReCloud UI 主题和品牌设计保持一致：
+颜色优先使用语义 Token。下面的原始值与当前 Elysola UI 主题和品牌设计保持一致：
 
 | Token                                 | Light     | Dark      | 用途                 |
 | ------------------------------------- | --------- | --------- | -------------------- |
@@ -174,9 +174,9 @@ Studio 使用 `4px` 基础间距刻度：
 
 默认情况下使用 `md` 控件高度和 `control` 圆角。`sm` 和 `lg` 只能根据密度或触控需求选择，不应在同一操作组中随意混用。
 
-## 与 ReCloud UI 的映射
+## 与 Elysola UI 的映射
 
-映射表必须记录在使用 ReCloud UI 的每个产品或共享主题包中。示例：
+映射表必须记录在使用 Elysola UI 的每个产品或共享主题包中。示例：
 
 ```css
 :root {
@@ -189,26 +189,26 @@ Studio 使用 `4px` 基础间距刻度：
 }
 ```
 
-如果 ReCloud UI 没有提供与 Studio 契约对应的 Token，不得临时引用一个看起来相近的默认值。应选择以下方案之一：
+如果 Elysola UI 没有提供与 Studio 契约对应的 Token，不得临时引用一个看起来相近的默认值。应选择以下方案之一：
 
 1. 在应用主题层定义 Studio Token 的明确原始值。
-2. 为 ReCloud UI 提交通用能力改进，并在发布后更新映射。
+2. 为 Elysola UI 提交通用能力改进，并在发布后更新映射。
 3. 对极少数产品专属值建立产品级 Token，并在设计系统中记录其适用范围。
 
 示例中的 `var(--background)` 和 `var(--radius-md)` 只是映射目标，不代表业务页面可以直接使用这些变量。
 
 ## 版本锁定与升级
 
-产品项目必须锁定 ReCloud UI 的明确版本范围，并在升级时执行以下检查：
+产品项目必须锁定 Elysola UI 的明确版本范围，并在升级时执行以下检查：
 
-1. 查看 ReCloud UI 的变更记录，确认 Token、主题和组件样式是否变化。
+1. 查看 Elysola UI 的变更记录，确认 Token、主题和组件样式是否变化。
 2. 对 Studio Token 映射表执行静态检查，确认所有必需 Token 仍然存在。
 3. 在 Light、Dark、窄屏和宽屏状态下执行视觉回归检查。
 4. 检查 Button、Input、Dialog、Table、Toast 等高频组件。
 5. 确认升级没有改变 Studio 的对比度、焦点状态、圆角、间距和密度。
 6. 通过后再更新依赖版本，并在产品变更记录中说明影响。
 
-如果 ReCloud UI 的默认 Token 变化但 Studio 映射仍然指向该默认 Token，必须先完成适配或固定原始值，不能直接合并升级。
+如果 Elysola UI 的默认 Token 变化但 Studio 映射仍然指向该默认 Token，必须先完成适配或固定原始值，不能直接合并升级。
 
 ## Token 变更流程
 
@@ -242,8 +242,8 @@ Studio 使用 `4px` 基础间距刻度：
 
 ## 禁止事项
 
-- 在页面样式中直接使用 ReCloud UI 默认原始值。
+- 在页面样式中直接使用 Elysola UI 默认原始值。
 - 通过 `!important` 或深层选择器覆盖组件样式来绕过 Token 契约。
-- 因为 ReCloud UI 升级后视觉变化，就在业务页面局部打补丁而不更新映射。
+- 因为 Elysola UI 升级后视觉变化，就在业务页面局部打补丁而不更新映射。
 - 创建没有语义、没有消费者范围和没有删除计划的临时 Token。
 - 让同一个 Studio 语义在不同产品中映射到不同含义。

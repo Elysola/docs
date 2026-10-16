@@ -2,22 +2,22 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 export default defineConfig({
-  site: "https://docs.worldexecute.me",
+  site: "https://docs.elysola.org",
   server: {
-    allowedHosts: ["recloud-docs.rhen.cloud"],
+    allowedHosts: ["docs.elysola.org"],
   },
   integrations: [
     starlight({
-      title: "ReCloud Studio",
+      title: "Elysola",
       logo: {
         src: "./src/assets/logo.svg",
-        alt: "ReCloud Studio",
+        alt: "Elysola",
       },
       social: [
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/ReCloudStudio",
+          href: "https://github.com/Elysola",
         },
         {
           icon: "discord",
@@ -27,12 +27,12 @@ export default defineConfig({
         {
           icon: "telegram",
           label: "Telegram",
-          href: "https://t.me/recloudstudio",
+          href: "https://t.me/elysola",
         },
         {
           icon: "twitter",
           label: "Twitter",
-          href: "https://twitter.com/recloudstudio",
+          href: "https://twitter.com/elysola",
         },
       ],
       sidebar: [
@@ -83,7 +83,7 @@ export default defineConfig({
             { label: "概述", slug: "design-system" },
             { label: "设计基础", slug: "design-system/foundations" },
             { label: "设计 Token", slug: "design-system/tokens" },
-            { label: "ReCloud UI 使用指南", slug: "design-system/recloud-ui" },
+            { label: "Elysola UI 使用指南", slug: "design-system/elysola-ui" },
           ],
         },
         {

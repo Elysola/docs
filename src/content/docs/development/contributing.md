@@ -1,6 +1,6 @@
 ---
 title: 贡献指南
-description: ReCloud Studio 的贡献流程与 PR/Issue 规范
+description: Elysola 的贡献流程与 PR/Issue 规范
 ---
 
 ## 准备工作
@@ -39,4 +39,4 @@ description: ReCloud Studio 的贡献流程与 PR/Issue 规范
 
 ## 行为准则
 
-请遵守 [ReCloud Studio 行为准则](../../conduct)。
+请遵守 [Elysola 行为准则](../../conduct)。

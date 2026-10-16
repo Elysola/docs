@@ -1,6 +1,6 @@
 ---
 const { head, id } = Astro.locals.starlightRoute;
-const ogImageUrl = `https://docs.worldexecute.me/og/${id || "index"}.png`;
+const ogImageUrl = `https://docs.elysola.org/og/${id || "index"}.png`;
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
