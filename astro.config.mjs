@@ -27,12 +27,12 @@ export default defineConfig({
         {
           icon: "telegram",
           label: "Telegram",
-          href: "https://t.me/elysola",
+          href: "https://t.me/ElysolaOrg",
         },
         {
           icon: "twitter",
           label: "Twitter",
-          href: "https://twitter.com/elysola",
+          href: "https://x.com/ElysolaOrg",
         },
       ],
       sidebar: [
