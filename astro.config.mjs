@@ -10,9 +10,10 @@ export default defineConfig({
     starlight({
       title: "Elysola",
       logo: {
-        src: "./src/assets/logo.svg",
+        src: "./src/assets/logo-small.svg",
         alt: "Elysola",
       },
+      favicon: "/favicon-32.png",
       social: [
         {
           icon: "github",

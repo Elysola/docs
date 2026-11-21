@@ -1,10 +1,12 @@
 ---
-import logoSvg from "../assets/logo.svg?raw";
+import logoSvg from "../assets/logo-small.svg?raw";
 const { siteTitleHref } = Astro.locals.starlightRoute;
+// 页眉按 32px 显示，因此使用光学校正的小尺寸图标（品牌资产规范）。
 const svg = logoSvg
   .replace(/<\?xml[^>]*\?>\s*/, "")
-  .replace(/width="512" height="512"/, 'width="32" height="32"')
-  .replace(/<title>[^<]*<\/title>/, "");
+  .replace(/width="\d+" height="\d+"/, 'width="32" height="32"')
+  .replace(/<title>[^<]*<\/title>/, "")
+  .replace(/role="img"/, 'role="img" aria-hidden="true"');
 ---
 
 <a href={siteTitleHref} class="site-title sl-flex" aria-label="Elysola" set:html={svg} />
