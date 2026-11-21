@@ -91,7 +91,9 @@ export default defineConfig({
           items: [
             { label: "概述", slug: "brand" },
             { label: "品牌使用规范", slug: "brand/brand-guidelines" },
+            { label: "品牌资产体系", slug: "brand/assets" },
             { label: "设计规范", slug: "brand/design" },
+            { label: "图标几何构造规范", slug: "brand/icon-geometry" },
           ],
         },
         {
